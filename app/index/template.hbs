@@ -1,1 +1,16 @@
 {{outlet}}
+
+{{#each model as |link|}}
+<div class="link">
+  <div class="star">✭</div>
+  <div class="display">
+    <a href={{link.url}}>{{link.title}}</a>
+    <div class="description">
+      {{link.description}}
+    </div>
+    <a href="#">{{link.creationDate}}</a>
+    <span> Edit</span>
+    <span> Delete</span>
+  </div>
+</div>
+{{/each}}
